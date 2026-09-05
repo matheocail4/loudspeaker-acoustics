@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+
+# COMSOL simulation files (too large for Git — keep locally)
+*.mph
+*.mph.zip
+
+# Python
+__pycache__/
+*.pyc
+
+# Editor/OS junk
+Thumbs.db

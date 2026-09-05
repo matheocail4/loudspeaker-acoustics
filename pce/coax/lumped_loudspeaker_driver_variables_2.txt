@@ -1,0 +1,9 @@
+omega_s 2*pi*Fs Fundamental resonance frequency
+R_AE BL^2/(S_D^2*R_E) Norton equivalent
+R_AT R_AE+R_MS/(S_D^2) Total acoustical resistance
+Qlf_D S_D*V0/BL*R_AE/R_AT*((1/Q_TS)*(acpr.iomega/omega_s))/((acpr.iomega/omega_s)^2+(1/Q_TS)*(acpr.iomega/omega_s)+1) Volume velocity transfer function (low freq. approx)
+omega_u1 M_MS*R_E/(M_MD*L_E) Transition frequency (low to high approximation)
+Qhf_D Qlf_D/(1+acpr.iomega/omega_u1) Volume velocity transfer function (high freq. approximation)
+prms rho0*acpr.omega*sqrt(0.5*u_D*conj(u_D))*S_D/(2*pi*1[m]) RMS pressure at 1[m] (piston)
+P_AR_ana pi/2*a^2*abs(u_D)^2*rho0*c0*(1-2*besselj(1,2*k0*a)/(2*k0*a)) Radiated power (piston)
+k0 acpr.omega/c0 Free space wave number

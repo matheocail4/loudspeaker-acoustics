@@ -1,0 +1,24 @@
+fmax 10[kHz] Maximal study frequency
+c0 343[m/s] Speed of sound in air
+rho0 1.2[kg/m^3] Density of air
+M_MD 33.4[g] Moving mass (voice coil and diaphragm)
+C_MS 1.18e-3[m/N] Suspension compliance
+R_MS 1.85[N*s/m] Suspension mechanical losses
+BL 11.4[T*m] Force factor, flux density (B) times coil length (L)
+R_E 7[ohm] Voice coil resistance
+L_e 6.89[mH] Voice coil inductance (constant)
+n_e 0.7 Voice coil loss factor
+V0 sqrt(2)[V] Driving voltage (peak)
+V0rms V0/sqrt(2) Driving voltage (rms)
+R_g 0[ohm] Driver output resistance
+a 12[cm] Piston radius of driver (equivalent)
+S_D a^2*pi Driver equivalent area
+M_MS M_MD+2*S_D^2*8*rho0/(3*pi^2*a) Moving mass (including acoustic load)
+Fs 1/(2*pi*sqrt(C_MS*M_MS)) Fundamental resonant frequency
+Q_ES 2*pi*Fs*M_MS*R_E/BL^2 Electrical Q factor at Fs
+Q_MS 2*pi*Fs*M_MS/R_MS Mechanical Q factor at Fs
+Q_TS Q_MS*Q_ES/(Q_MS+Q_ES) Total Q factor of driver at Fs
+V_AS rho0*c0^2*S_D^2*C_MS Equivalent volume compliance
+eta0 4*pi^2/c0^3*Fs^3*V_AS/Q_ES Reference efficiency of driver
+Rair 20[cm] Air domain radius
+Rpml 6[cm] PML layer thickness

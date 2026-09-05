@@ -1,0 +1,7 @@
+L_E (L_e/(sin(n_e*pi/2)))*(acpr.omega[s/rad])^(n_e-1) Voice coil inductance (frequency dependent)
+Rp_E (L_e/(cos(n_e*pi/2)))*(acpr.omega[s/rad])^(n_e)[ohm/H] Resistance (losses in magnetic system)
+u_D acpr.ilsb1.v_ax Diaphragm velocity (COMSOL)
+F_D acpr.ilsb1.F_ax Axial pressure force (COMSOL)
+P_AR acpr.ilsb1.P_front Radiated power (COMSOL)
+P_E 0.5*realdot(V0,cir.R1.i) Electric input power (rms)
+eta P_AR/P_E Driver efficiency
