@@ -2,8 +2,11 @@ import os
 import numpy as np
 import matplotlib.pyplot as plt
 
+# Les fichiers de donnees sont dans le meme dossier que ce script
+DOSSIER = os.path.dirname(os.path.abspath(__file__))
 
-fichier1 = open('/Users/matheocail/Desktop/1A/PRONTO/2_CYLINDRES/Données_2C_200.txt', 'r') #À changer selon qui utilise le programme
+
+fichier1 = open(os.path.join(DOSSIER, 'Données_2C_200.txt'), 'r', encoding='utf-8')
 SPL1 = fichier1.readlines()
 fichier1.close()
 
@@ -33,7 +36,7 @@ for ligne in SPL1:
     freq1.append(float(don[0]))
     l200.append(float(don[1]))
 
-fichier2 = open('/Users/matheocail/Desktop/1A/PRONTO/2_CYLINDRES/Données_2C_220.txt', 'r') #À changer selon qui utilise le programme
+fichier2 = open(os.path.join(DOSSIER, 'Données_2C_220.txt'), 'r', encoding='utf-8')
 SPL2 = fichier2.readlines()
 fichier2.close()
 
@@ -63,7 +66,7 @@ for ligne in SPL2:
     freq2.append(float(don[0]))
     l220.append(float(don[1]))
 
-fichier3 = open('/Users/matheocail/Desktop/1A/PRONTO/2_CYLINDRES/Données_2C_2462.txt', 'r') #À changer selon qui utilise le programme
+fichier3 = open(os.path.join(DOSSIER, 'Données_2C_2462.txt'), 'r', encoding='utf-8')
 SPL3 = fichier3.readlines()
 fichier3.close()
 
@@ -93,7 +96,7 @@ for ligne in SPL3:
     freq3.append(float(don[0]))
     l2462.append(float(don[1]))
 
-fichier4 = open('/Users/matheocail/Desktop/1A/PRONTO/2_CYLINDRES/Données_2C_260.txt', 'r') #À changer selon qui utilise le programme
+fichier4 = open(os.path.join(DOSSIER, 'Données_2C_260.txt'), 'r', encoding='utf-8')
 SPL4 = fichier4.readlines()
 fichier4.close()
 

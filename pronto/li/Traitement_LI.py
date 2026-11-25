@@ -2,8 +2,11 @@ import os
 import numpy as np
 import matplotlib.pyplot as plt
 
+# Les fichiers de donnees sont dans le meme dossier que ce script
+DOSSIER = os.path.dirname(os.path.abspath(__file__))
 
-fichier1 = open('/Users/matheocail/Desktop/1A/PRONTO/LI/Données_2C_LI.txt', 'r') #À changer selon qui utilise le programme
+
+fichier1 = open(os.path.join(DOSSIER, 'Données_2C_LI.txt'), 'r', encoding='utf-8')
 SPL1 = fichier1.readlines()
 fichier1.close()
 
@@ -33,7 +36,7 @@ for ligne in SPL1:
     freq1.append(float(don[0]))
     l2CLI.append(float(don[1]))
 
-fichier2 = open('/Users/matheocail/Desktop/1A/PRONTO/LI/Données_4C_LI.txt', 'r') #À changer selon qui utilise le programme
+fichier2 = open(os.path.join(DOSSIER, 'Données_4C_LI.txt'), 'r', encoding='utf-8')
 SPL2 = fichier2.readlines()
 fichier2.close()
 
